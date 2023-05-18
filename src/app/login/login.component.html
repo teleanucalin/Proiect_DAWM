@@ -1,0 +1,19 @@
+<h2>Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div>
+      <label>Email:</label>
+      <input type="email" formControlName="email">
+  </div>
+  <div>
+      <label>Password:</label>
+      <input type="password" formControlName="password">
+  </div>
+  <div>
+      <label>Remember me:</label>
+      <input type="checkbox" formControlName="rememberMe">
+  </div>
+  <div>
+      <button type="submit">Login</button>
+      <a routerLink="/register" class="btn btn-link">Register</a>
+  </div>
+</form>

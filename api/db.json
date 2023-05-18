@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "test@test.com",
+      "password": "Test@123",
+      "firstName": "Test",
+      "lastName": "User"
+    },
+    {
+      "firstName": "Teleanu",
+      "lastName": "Calin",
+      "email": "teleanu@mail.com",
+      "password": "Supertare112!",
+      "confirmPassword": "Supertare112!",
+      "id": 2
+    },
+    {
+      "password": "Supertare112!",
+      "id": 3
+    },
+    {
+      "firstName": "Calin",
+      "lastName": "Teleanu",
+      "email": "teleanu@mail.com",
+      "password": "Supertare112!",
+      "confirmPassword": "Supertare112!",
+      "id": 4
+    },
+    {
+      "password": "Supertare112!",
+      "id": 5
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "firstName": "rosu",
+      "lastName": "negru",
+      "email": "mama@gmail.com",
+      "city": "Tractor112!",
+      "dateofbirth": "Tractor112!"
+    }
+  ]
+}

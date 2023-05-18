@@ -1,0 +1,37 @@
+<nz-table #basicTable [nzData]="friends" [nzFrontPagination]="false">
+  <thead>
+    <tr>
+      <th (click)="sortTable('name')">Name</th>
+      <th (click)="sortTable('lastname')">Last Name</th>
+      <th (click)="sortTable('city')">City</th>
+      <th (click)="sortTable('email')">Email</th>
+      <th (click)="sortTable('dateofbirth')">Date of Birth</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let friend of filteredFriends; let i = index">
+      <td>{{ friend.name }}</td>
+      <td>{{ friend.lastname }}</td>
+      <td>{{ friend.city }}</td>
+      <td>{{ friend.email }}</td>
+      <td>{{ friend.dateofbirth }}</td>
+      <td>
+        <button class="editButton" (click)="updateFriend(friend)">Update</button>
+      </td>
+      <td>
+        <button class="deleteButton" (click)="deleteFriend(friend)">Delete</button>
+      </td>
+      <td>
+        <button class="detailsButton" (click)="openDetails(friend)">Details</button>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>
+
+<button class="addButton" (click)="addFriend()">Add Friend</button>
+
+<input type="text" [(ngModel)]="searchQuery" placeholder="Search" (input)="filterFriends()">
+

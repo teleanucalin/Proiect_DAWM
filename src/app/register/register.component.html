@@ -1,0 +1,34 @@
+<h2>Register</h2>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" formControlName="firstName">
+  </div>
+  <div>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" formControlName="lastName">
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password" [ngClass]="{'invalid': f['password'].invalid && (f['password'].dirty || f['password'].touched)}">
+    <div *ngIf="f['password'].invalid && (f['password'].dirty || f['password'].touched)" class="error-message">
+      Password must contain at least 6 characters, including one uppercase letter, one lowercase letter, one digit, and one special character.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="confirmPassword">Confirm Password:</label>
+    <input type="password" id="confirmPassword" formControlName="confirmPassword" [ngClass]="{'invalid': f['confirmPassword'].errors?.['passwordMismatch'] && (f['confirmPassword'].dirty || f['confirmPassword'].touched)}">
+    <div *ngIf="f['confirmPassword'].errors?.['passwordMismatch'] && (f['confirmPassword'].dirty || f['confirmPassword'].touched)" class="error-message">
+      Passwords do not match!
+    </div>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+  <button type="submit">Register</button>
+  <a routerLink="/login" class="btn btn-link">Cancel</a>
+</form>

@@ -1,0 +1,75 @@
+/* Basic layout for the page */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f6f6f6;
+}
+
+h2 {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+form {
+  width: 350px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+form input[type="text"], form input[type="email"], form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Invalid field styling */
+form input.invalid {
+  border-color: #dc3545;
+}
+
+/* Error message styling */
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button styling */
+button[type="submit"], a.btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+button[type="submit"] {
+  background-color: #007BFF;
+}
+
+a.btn {
+  background-color: #6c757d;
+  text-align: center;
+  text-decoration: none;
+}

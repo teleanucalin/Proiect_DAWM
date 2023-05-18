@@ -1,0 +1,22 @@
+<div class="form-group">
+  <label for="name">Name</label>
+  <input type="text" class="form-control" id="name" [(ngModel)]="friend.name" name="name">
+</div>
+<div class="form-group">
+  <label for="lastname">Last Name</label>
+  <input type="text" class="form-control" id="lastname" [(ngModel)]="friend.lastname" name="lastname">
+</div>
+<div class="form-group">
+  <label for="city">City</label>
+  <input type="text" class="form-control" id="city" [(ngModel)]="friend.city" name="city">
+</div>
+<div class="form-group">
+  <label for="email">Email</label>
+  <input type="text" class="form-control" id="email" [(ngModel)]="friend.email" name="email">
+</div>
+<div class="form-group">
+  <label for="dateofbirth">Date of Birth</label>
+  <input type="text" class="form-control" id="dateofbirth" [(ngModel)]="friend.dateofbirth" name="dateofbirth">
+</div>
+
+<button (click)="editFriend()">Apply</button>
